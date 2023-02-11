@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch,HashRouter } from 'react-router-dom'
 import {
   About,
   Contact,
@@ -20,6 +20,7 @@ export default class App extends Component {
   render() {
     return (
       <React.Fragment>
+        <HashRouter>
         <Preloader />
         <Switch className='p-0'>
           <Route exact path='/'>
@@ -43,6 +44,7 @@ export default class App extends Component {
             <Footer />
           </Route>
         </Switch>
+        </HashRouter>
       </React.Fragment>
     )
   }
